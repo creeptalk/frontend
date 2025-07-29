@@ -1,0 +1,30 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+.typing-bubble {
+  font-family: 'Pretendard Variable', sans-serif;
+  color: white;
+  background-color: #6c757d;
+  border-radius: 8px;
+  padding: 8px;
+  align-self: flex-start;
+  display: inline-block;
+}
+
+.typing-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 2px;
+  background: white;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0%   { opacity: 0.2; }
+  20%  { opacity: 1;   }
+  100% { opacity: 0.2; }
+}

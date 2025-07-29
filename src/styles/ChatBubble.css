@@ -1,0 +1,20 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+.chat-bubble {
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 75%;
+  font-family: 'Pretendard Variable', sans-serif;
+  color: white;
+  word-break: break-word;
+}
+
+.chat-bubble.user {
+  background-color: #63a397;
+  align-self: flex-end;
+}
+
+.chat-bubble.bot {
+  background-color: #6c757d;
+  align-self: flex-start;
+}

@@ -1,0 +1,96 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+
+.chat-input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  margin-top: 12px;
+}
+
+.image-upload-btn-outer {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  display: flex;
+  
+  align-items: center;
+}
+
+
+
+.image-upload-btn-outer svg {
+  width: auto;
+  height: auto;
+}
+
+/* 기존과 동일한 그라데이션 래퍼 */
+.chat-input-outer {
+  --r: 22.5px;
+  padding: 1px;
+  border-radius: var(--r);
+  background: linear-gradient(90deg, #6CA4C4 0%, #4DE2C4 37%, #26C49F 75%);
+  width: 100%;
+  max-width: 1150px;
+}
+
+/* 입력 폼 */
+.chat-input-form {
+  height: 42px;
+  width: 100%;
+  border-radius: var(--r);
+  background: #0B1215;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 입력창 */
+.custom-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: 'Pretendard Variable', sans-serif;
+
+  font-size: 13px;
+  padding: 0 12px;
+  outline: none;
+}
+
+/* 전송 버튼 */
+.send-btn {
+  background: transparent;
+  border: none;
+  padding-right: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.send-icon {
+  width: 14px;
+  height: 13.42px;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .chat-input-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .chat-input-outer {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .image-upload-btn-outer svg,
+  .send-icon {
+    width: auto;
+    height: auto;
+  }
+}

@@ -1,0 +1,93 @@
+.landing-container {
+  background-color: #0B1215;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  z-index: 10;
+}
+
+/* 공통 고스트 스타일 */
+.ghost {
+  position: absolute;
+  height: auto;
+  width: 244px;
+  z-index: 1;
+  opacity: 0;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+/* ✅ 왼쪽 고스트 – 대각선 진입 */
+.ghost-left {
+  left: -30vw;   /* 시작 왼쪽 바깥 */
+  top: 80%;      /* 시작 아래쪽 */
+  animation-name: slideInLeftDiagonal;
+}
+
+@keyframes slideInLeftDiagonal {
+  to {
+    left: 0vw;    /* 최종 위치 */
+    top: 54%;
+    opacity: 1;
+  }
+}
+
+/* ✅ 오른쪽 고스트 – 대각선 진입 */
+.ghost-right {
+  left: 120vw;  /* 시작 오른쪽 바깥 */
+  top: -30%;    /* 시작 위쪽 */
+  animation-name: slideInRightDiagonal;
+}
+
+@keyframes slideInRightDiagonal {
+  to {
+    left: 86vw;  /* 최종 위치 */
+    top: 9%;
+    opacity: 1;
+  }
+}
+
+/* ✅ 모바일 대응 */
+@media (max-width: 768px) {
+  .ghost {
+    width: auto;
+  }
+
+  .ghost-left {
+    left: -30vw;
+    top: 100%;
+    animation-name: slideInLeftDiagonalMobile;
+  }
+
+  @keyframes slideInLeftDiagonalMobile {
+    to {
+      left: 0vw;
+      top: 75%;
+      opacity: 1;
+    }
+  }
+
+  .ghost-right {
+    left: 120vw;
+    top: 30%;
+    animation-name: slideInRightDiagonalMobile;
+  }
+
+  @keyframes slideInRightDiagonalMobile {
+    to {
+      left: 68vw;
+      top: 15%;
+      opacity: 1;
+    }
+  }
+}

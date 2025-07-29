@@ -1,0 +1,44 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+
+.theme-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.theme-title {
+    font-family: 'Pretendard Variable', sans-serif;
+font-weight: 500;
+  font-size: 13px;
+  color: #fafafa; /* 부드러운 회색 */
+  margin-bottom: 4px;
+}
+
+.theme-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.theme-button {
+  background-color: transparent;
+  border: 1px solid #63A397; /* 연한 청록색 */
+  color: #63a397;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-weight: 500;
+    font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+}
+
+.theme-button:hover {
+  background-color: #0B1215;
+}
+
+.theme-button.active {
+  background-color: #63a397;
+  color: white;
+}

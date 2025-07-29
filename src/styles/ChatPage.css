@@ -1,0 +1,80 @@
+/* ===================== */
+/* 타이핑 버블 애니메이션 */
+/* ===================== */
+.typing-dot {
+  display: inline-block;
+  animation: blink 1.4s infinite both;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0%   { opacity: 0.2; }
+  20%  { opacity: 1;   }
+  100% { opacity: 0.2; }
+}
+
+/* ===================== */
+/* 페이지 컨테이너(기본테마) */
+/* ===================== */
+.chat-page-container {
+  background-color: #0B1215;   /* 기본 테마 색 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-between;
+  position: relative;          /* 배경 레이어 기준 */
+  overflow: hidden;
+}
+
+/* ===================== */
+/* 배경 레이어 */
+/* ===================== */
+
+/* 흐릿한 풀스크린 배경 */
+.background-blur {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(18px) brightness(0.6);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* 중앙에 선명한 원본 (391x844) */
+.background-clear {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 391px;
+  height: 844px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ===================== */
+/* 실제 채팅 UI 래퍼 */
+/* ===================== */
+.chat-content {
+  position: relative;
+  z-index: 2;  /* 배경보다 위 */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* (선택) 모바일에서 중앙 이미지 살짝 줄이기 */
+@media (max-width: 480px) {
+  .background-clear {
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 391 / 844;
+  }
+}
