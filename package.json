@@ -2,7 +2,7 @@
   "name": "scary-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://34.64.48.255:8080",
+  "proxy": "http://34.64.233.129:8080",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
